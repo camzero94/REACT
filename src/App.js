@@ -6,6 +6,7 @@ function App() {
         <h2>TITLE</h2>
         <div className='actions'>
           <button className='btn'>Delete aaa</button>
+          <button className='btn'>Delete HAHAHA</button>
         </div>
       </div>
     </div>
