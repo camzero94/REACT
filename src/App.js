@@ -5,8 +5,7 @@ function App() {
       <div className='card'>
         <h2>TITLE</h2>
         <div className='actions'>
-          <button className='btn'>Delete aaa</button>
-          <button className='btn'>Delete HAHAHA</button>
+          <button className='btn'>Delete </button>
         </div>
       </div>
     </div>
