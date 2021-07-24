@@ -1,7 +1,18 @@
+import { useState } from 'react';
+import Backdrop from './Backdrop';
+import Modal from './Modal';
+
 function Todo(props) {
+  //modalIsOpen = True or false depende on inside function useState()
+  //setModalOpen = is a function that change value of modalIsOpen
+  const [modalIsOpen, setModalOpen] = useState(false);
+
   const deleteHandler = function () {
-    console.log('Clicked', props.text);
+    setModalOpen(true);
   };
+  function closeModalHandler() {
+    setModalOpen(false);
+  }
   return (
     <div>
       <h1>My Todo </h1>
@@ -12,6 +23,9 @@ function Todo(props) {
             Delete
           </button>
         </div>
+        {/*When modalIsOpen is true then show modal and backdrop */}
+        {modalIsOpen ? <Modal onCancel={closeModalHandler} /> : null}
+        {modalIsOpen ? <Backdrop onClose={closeModalHandler} /> : null}
       </div>
     </div>
   );
